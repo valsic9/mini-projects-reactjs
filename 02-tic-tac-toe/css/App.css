@@ -39,7 +39,7 @@ body {
 
 .board h1 {
   color: #eee;
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 }
 
 .board button {
@@ -126,7 +126,8 @@ body {
   border: 2px solid #eee;
   border-radius: 5px;
   display: grid;
-  place-items: center;
+  justify-items: center;
+  align-items: center;
   cursor: pointer;
   font-size: 48px;
 }
