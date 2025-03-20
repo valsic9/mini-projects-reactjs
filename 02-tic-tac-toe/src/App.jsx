@@ -7,11 +7,25 @@ import { TURNS } from "./Constants";
 import { Square } from "./components/Square";
 import { checkWinnerFrom, checkEndGameFrom } from "./logic/board";
 import { WinnerModal } from "./components/WinnerModal";
+import {
+  saveGameToLocalStorage,
+  resetGameFromLocalStorage,
+} from "./logic/storage/index.js";
 
 export function App() {
-  const [board, setBoard] = useState(Array(9).fill(null));
+  // Load bord from LocalStorage if exists or create new empty board
+  const [board, setBoard] = useState(() => {
+    const boardFromLocalStorage = window.localStorage.getItem("board");
+    return boardFromLocalStorage
+      ? JSON.parse(boardFromLocalStorage)
+      : Array(9).fill(null);
+  });
 
-  const [turn, setTurn] = useState(TURNS.X);
+  // Load turn from LocalStprage if exists or set X as default
+  const [turn, setTurn] = useState(() => {
+    const turnFromLocalStorage = window.localStorage.getItem("turn");
+    return turnFromLocalStorage ?? TURNS.X;
+  });
 
   const [winner, setWinner] = useState(null); // null (no winner), false (draw), x / o (winner)
 
@@ -27,6 +41,9 @@ export function App() {
     const newBoard = [...board];
     newBoard[index] = turn; // x u o;
     setBoard(newBoard);
+
+    // save to LocalStorage
+    saveGameToLocalStorage(newBoard, newTurn);
 
     // check winner
     const newWinner = checkWinnerFrom(newBoard);
@@ -44,6 +61,9 @@ export function App() {
     setBoard(Array(9).fill(null));
     setTurn(TURNS.X);
     setWinner(null);
+
+    // remove localStorageç
+    resetGameFromLocalStorage();
   };
 
   return (
