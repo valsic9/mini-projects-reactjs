@@ -1,8 +1,12 @@
-import { useState } from "react";
-import "..css/App.css";
+import { useEffect, useState } from "react";
+import { MouseFollower } from "./components/MouseFollower";
 
 function App() {
-  return <></>;
+  return (
+    <main>
+      <MouseFollower />
+    </main>
+  );
 }
 
 export default App;

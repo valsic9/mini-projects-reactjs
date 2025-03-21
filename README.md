@@ -10,6 +10,8 @@ Here are some of the projects included in this repository:
 
 2. Tic Tac Toe
 
+3. Mouse Follower
+
 ## 📌 Features
 
 🔹 Beginner to Intermediate level projects
