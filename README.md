@@ -12,6 +12,10 @@ Here are some of the projects included in this repository:
 
 3. Mouse Follower
 
+4. Cat API fetch
+
+5. Movie searcher and sorter
+
 ## 📌 Features
 
 🔹 Beginner to Intermediate level projects

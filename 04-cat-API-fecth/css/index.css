@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+}
+
+img.cat-image {
+  max-width: 320px;
+}
