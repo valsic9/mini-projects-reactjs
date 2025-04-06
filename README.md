@@ -14,7 +14,7 @@ Here are some of the projects included in this repository:
 
 4. Cat API fetch
 
-5. Movie searcher and sorter
+5. Movie searcher
 
 ## 📌 Features
 
@@ -45,3 +45,10 @@ Here are some of the projects included in this repository:
 ## 🤝 Contributing
 
 Contributions are welcome! If you want to add a new project, improve an existing one, or fix bugs, feel free to open a pull request.
+
+## 🙌 Credits
+
+This project is part of a collection of small React apps built while following the excellent tutorials by [midudev](https://github.com/midudev) on [YouTube](https://www.youtube.com/@midulive).
+Huge thanks to midudev for the clear explanations, practical examples, and for making React development approachable and fun for beginners. 🎓⚛️
+
+If you're learning React, definitely check out his channel and consider supporting his work!
